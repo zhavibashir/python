@@ -3,6 +3,7 @@ from django.http import HttpResponse,JsonResponse
 from .models import Note
 from .forms import NoteForm
 # Create your views here.
+# i added this comment to see github
 def home(request):
     all_notes = Note.objects.all()
     form = NoteForm()
