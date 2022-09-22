@@ -1,0 +1,77 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>shafie</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'chat/style.css' %}" />
+  </head>
+  <body>
+    <P class="logged_in_user_id" style="display : none">{{user.id}}</P>
+    <!-- partial:index.partial.html -->
+    <div class="center">
+      <div class="contacts">
+        <i class="fas fa-bars fa-2x"></i>
+        <h2>Contacts</h2>
+        {%for contact in users%}
+        <div class="contact">
+          <img src = "{{contact.profile.image.url}}" class="pic rogers"></img>
+          <div class="badge">14</div>
+          <div class="name">{{contact.username}}</div>
+          <div class="message">That is America's ass 🇺🇸🍑</div>
+        </div>
+        {%endfor%}
+      </div>
+
+      <div class="chat">
+        <div class="contact bar">
+          <div class="pic stark"></div>
+          <div class="name">Tony Stark</div>
+          <div class="seen">Today at 12:56</div>
+        </div>
+        <div class="messages" id="chat">
+          <div class="time">Today at 11:41</div>
+          <div class="message sender">Hey, man! What's up, Mr Stark? 👋</div>
+          <div class="message">Kid, where'd you come from?</div>
+          <div class="message sender">Field trip! 🤣</div>
+          <div class="message sender">
+            Uh, what is this guy's problem, Mr. Stark? 🤔
+          </div>
+          <div class="message">
+            Uh, he's from space, he came here to steal a necklace from a wizard.
+          </div>
+          <div class="message">Uh, what is this guy's problem, Mr. Stark?</div>
+          <div class="message sender">
+            Uh, what is this guy's problem, Mr. Stark? 🤔
+          </div>
+          <div class="message sender">
+            Uh, what is this guy's problem, Mr. Stark? 🤔
+          </div>
+          <div class="message">
+            Uh, he's from space, he came here to steal a necklace from a wizard.
+          </div>
+          <div class="message">Uh, what is this guy's problem, Mr. Stark?</div>
+          <div class="message sender">
+            Uh, what is this guy's problem, Mr. Stark? 🤔
+          </div>
+        </div>
+        <div class="input">
+          <input placeholder="Type your message here!" type="text" /><i
+            class="fas fa-paper-plane"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'chat/script.js' %}"></script>
+  </body>
+</html>

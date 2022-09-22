@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Shafie</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="mymodal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>cart items</h1>
+      <ul class="cart-items">
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product1.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product4.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product2.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product3.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product4.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+      </ul>
+      <div class="total_buy">
+        <div class="total"><span>total:</span>$2250</div>
+        <button class="btn btn-primary">buy all</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="mymodal fmodal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>favorite items</h1>
+      <ul class="cart-items">
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product1.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product4.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product2.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product3.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+        <li class="cart border">
+          <div class="item">
+            <div class="cart-img">
+              <img src="img/product4.png" alt="" />
+            </div>
+            <div class="cart-title">macbook laptop</div>
+          </div>
+          <div class="price">$450</div>
+          <button class="btn btn-outline-secondary">remove</button>
+        </li>
+      </ul>
+    </div>
+    <div class="overlay hidden"></div>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light"
+      aria-label="Eleventh navbar example"
+    >
+      <div class="container d-flex gap-5">
+        <a class="navbar-brand logo" href="#"
+          >E- <span class="text-primary">Shafie</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample09"
+          aria-controls="navbarsExample09"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample09">
+          <div class="search-div border">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-size"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+            <input
+              class="search-input"
+              type="text"
+              placeholder="Search products..."
+              aria-label="Search"
+            />
+          </div>
+          <ul class="navbar-nav gap-3 ms-auto mb-2 mb-lg-0">
+            <li class="nav-item show-modal">
+              <a class="nav-link" aria-current="page" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="icon-size"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                  />
+                </svg>
+                <span class="hide-nav-link">your cart</span>
+              </a>
+            </li>
+            <li class="nav-item showfmodal">
+              <a class="nav-link" href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="icon-size"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  />
+                </svg>
+                <span class="hide-nav-link">favorite</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="accountdropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="icon-size"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+                <span class="hide-nav-link">Account</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li><a class="dropdown-item" href="#">Sign Up</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="bg-light">
+      <div class="container col-xxl-8 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img
+              src="img/product1.png"
+              class="d-block mx-lg-auto img-fluid"
+              alt="Bootstrap Themes"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">macbook laptop</h1>
+            <p class="lead">
+              this is the best laptop for gaming and eduction purpose this has
+              12gb of ram and 1tb of rom you can find this laptop in apple store
+              and all other electoronics this is the best laptop for gaming and
+              eduction purpose this has 12gb of ram and 1tb of rom you can find
+              this laptop in apple store and all other electoronics
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+                Buy now
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-lg px-4"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <h1 class="fw-bold mb-5 text-muted">Products</h1>
+        <!-- Tabs navs -->
+        <div class="tabs mb-5">
+          <div class="tab active">Laptobs</div>
+          <div class="tab">Mobiles</div>
+          <div class="tab">Accessores</div>
+          <div class="tab">All</div>
+        </div>
+        <div class="products">
+          <div class="product">
+            <a class="love-icon" href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-size"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </a>
+            <div class="product-image">
+              <img src="img/product2.png" alt="" class="product-img" />
+            </div>
+            <div class="product-title">this is product</div>
+            <div class="pricing">
+              <span class="price">$333</span>
+              <span class="prev-price">$400</span>
+            </div>
+          </div>
+          <div class="product">
+            <a class="love-icon" href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-size"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </a>
+            <div class="product-image">
+              <img src="img/sports_shoes.jpg" alt="" class="product-img" />
+            </div>
+            <div class="product-title">this is product</div>
+            <div class="pricing">
+              <span class="price">$333</span>
+              <span class="prev-price">$400</span>
+            </div>
+          </div>
+          <div class="product">
+            <a class="love-icon" href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-size"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </a>
+            <div class="product-image">
+              <img src="img/product4.png" alt="" class="product-img" />
+            </div>
+            <div class="product-title">this is product</div>
+            <div class="pricing">
+              <span class="price">$333</span>
+              <span class="prev-price">$400</span>
+            </div>
+          </div>
+          <div class="product">
+            <a class="love-icon" href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-size"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </a>
+            <div class="product-image">
+              <img src="img/product2.png" alt="" class="product-img" />
+            </div>
+            <div class="product-title">this is product</div>
+            <div class="pricing">
+              <span class="price">$333</span>
+              <span class="prev-price">$400</span>
+            </div>
+          </div>
+          <div class="product">
+            <a class="love-icon" href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-size"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </a>
+            <div class="product-image">
+              <img src="img/product3.png" alt="" class="product-img" />
+            </div>
+            <div class="product-title">this is product</div>
+            <div class="pricing">
+              <span class="price">$333</span>
+              <span class="prev-price">$400</span>
+            </div>
+          </div>
+          <div class="product">
+            <a class="love-icon" href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-size"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </a>
+            <div class="product-image">
+              <img src="img/product1.png" alt="" class="product-img" />
+            </div>
+            <div class="product-title">this is product</div>
+            <div class="pricing">
+              <span class="price">$333</span>
+              <span class="prev-price">$400</span>
+            </div>
+          </div>
+          <div class="product">
+            <a class="love-icon" href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-size"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </a>
+            <div class="product-image">
+              <img src="img/product3.png" alt="" class="product-img" />
+            </div>
+            <div class="product-title">this is product</div>
+            <div class="pricing">
+              <span class="price">$333</span>
+              <span class="prev-price">$400</span>
+            </div>
+          </div>
+          <div class="product">
+            <a class="love-icon" href="#"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-size"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                />
+              </svg>
+            </a>
+            <div class="product-image">
+              <img src="img/product4.png" alt="" class="product-img" />
+            </div>
+            <div class="product-title">this is product</div>
+            <div class="pricing">
+              <span class="price">$333</span>
+              <span class="prev-price">$400</span>
+            </div>
+          </div>
+        </div>
+
+        <div aria-label="..." class="pagination-div">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+                >Previous</a
+              >
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container text-center">
+        <span class="text-muted">this website is made by shafie.</span>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'products/js/app.js' %} "></script>
+  </body>
+</html>

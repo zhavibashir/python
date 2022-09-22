@@ -1,0 +1,17 @@
+body {
+  min-height: 100vh;
+}
+.row div {
+  transition: 0.5s;
+  cursor: pointer;
+}
+.row div:hover {
+  background-color: #212529;
+  color: white;
+}
+.row .next {
+  background: black;
+}
+.row .next:hover {
+  background: #0d6dfdaf;
+}
