@@ -8,8 +8,9 @@ class Categories(models.Model):
 
     def __str__(self):
         return self.name
-class Product(models.Model):
 
+
+class Product(models.Model):
     title= models.CharField(max_length=200);
     desc= models.CharField(max_length=10000)
     price=models.FloatField(null=False)

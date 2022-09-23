@@ -1,4 +1,5 @@
 
+import random
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, JsonResponse
 from .models import Product, Categories
@@ -6,9 +7,12 @@ from .models import Product, Categories
 # Create your views here.
 def home(request):
     products = Product.objects.all()
+    categories = Categories.objects.all()
+    items = list(products)
+    hero_product = random.choice(items)
     if "carts" in request.session:
         print(request.session["carts"])
-    return render(request, "products/index.html" , context = {"products" : products})
+    return render(request, "products/index.html" , context = {"products" : products, "hero_product" : hero_product, "categories":categories})
     
 
 

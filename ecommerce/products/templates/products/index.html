@@ -212,7 +212,7 @@
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6">
             <img
-              src="{% static 'products/img/product1.png' %}"
+              src="{{hero_product.image.url}}"
               class="d-block mx-lg-auto img-fluid"
               alt="Bootstrap Themes"
               width="700"
@@ -221,14 +221,8 @@
             />
           </div>
           <div class="col-lg-6">
-            <h1 class="display-5 fw-bold lh-1 mb-3">macbook laptop</h1>
-            <p class="lead">
-              this is the best laptop for gaming and eduction purpose this has
-              12gb of ram and 1tb of rom you can find this laptop in apple store
-              and all other electoronics this is the best laptop for gaming and
-              eduction purpose this has 12gb of ram and 1tb of rom you can find
-              this laptop in apple store and all other electoronics
-            </p>
+            <h1 class="display-5 fw-bold lh-1 mb-3">{{hero_product.title}}</h1>
+            <p class="lead">{{hero_product.desc}}</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
               <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
                 Buy now
@@ -250,10 +244,12 @@
         <h1 class="fw-bold mb-5 text-muted">Products</h1>
         <!-- Tabs navs -->
         <div class="tabs mb-5">
-          <div class="tab active">Laptobs</div>
-          <div class="tab">Mobiles</div>
-          <div class="tab">Accessores</div>
-          <div class="tab">All</div>
+          <a href="{% url 'home' %}"><div class="tab active">All</div></a>
+          {% for category in categories%}
+          <a href="{% url 'category_filter' category.name %}"
+            ><div class="tab">{{category.name}}</div></a
+          >
+          {%endfor%}
         </div>
         <div class="products">
           {% for product in products %}
