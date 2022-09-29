@@ -11,15 +11,18 @@ def home(request):
     items = list(products)
     hero_product = random.choice(items)
     if "carts" in request.session:
-        print(request.session["carts"])
-    return render(request, "products/index.html" , context = {"products" : products, "hero_product" : hero_product, "categories":categories})
+        carts = request.session["carts"]
+    return render(request, "products/index.html" , context = {"products" : products, "hero_product" : hero_product, "categories":categories, "carts" : carts})
     
 
 
 def category(request, name):
+    categories = Categories.objects.all()
     category = Categories.objects.get(name=name)
     products = Product.objects.filter(category=category)
-    return render(request, "products/index.html" , context = {"products" : products})
+    items = list(products)
+    hero_product = random.choice(items)
+    return render(request, "products/index.html" , context = {"products" : products,"categories":categories})
 
 
 def add_to_cart(request, id):

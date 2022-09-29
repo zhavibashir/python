@@ -19,78 +19,23 @@
       <button class="close-modal">&times;</button>
       <h1>cart items</h1>
       <ul class="cart-items">
+        {% for cart in carts %}
         <li class="cart border">
           <div class="item">
             <div class="cart-img">
-              <img src="{% static 'products/img/product1.png' %}" alt="" />
+              <img src="{{ cart.image }}" alt="" />
             </div>
-            <div class="cart-title">macbook laptop</div>
+            <div class="cart-title">{{cart.title}}</div>
           </div>
-          <div class="price">$450</div>
+          <div class="price">${{cart.price}}</div>
           <button class="btn btn-outline-secondary">remove</button>
         </li>
+        {%endfor%}
       </ul>
       <div class="total_buy">
         <div class="total"><span>total:</span>$2250</div>
         <button class="btn btn-primary">buy all</button>
       </div>
-    </div>
-    <div class="overlay hidden"></div>
-    <div class="mymodal fmodal hidden">
-      <button class="close-modal">&times;</button>
-      <h1>favorite items</h1>
-      <ul class="cart-items">
-        <li class="cart border">
-          <div class="item">
-            <div class="cart-img">
-              <img src="{% static 'products/img/product1.png' %}" alt="" />
-            </div>
-            <div class="cart-title">macbook laptop</div>
-          </div>
-          <div class="price">$450</div>
-          <button class="btn btn-outline-secondary">remove</button>
-        </li>
-        <li class="cart border">
-          <div class="item">
-            <div class="cart-img">
-              <img src="{% static 'products/img/product4.png' %}" alt="" />
-            </div>
-            <div class="cart-title">macbook laptop</div>
-          </div>
-          <div class="price">$450</div>
-          <button class="btn btn-outline-secondary">remove</button>
-        </li>
-        <li class="cart border">
-          <div class="item">
-            <div class="cart-img">
-              <img src="{% static 'products/img/product2.png' %}" alt="" />
-            </div>
-            <div class="cart-title">macbook laptop</div>
-          </div>
-          <div class="price">$450</div>
-          <button class="btn btn-outline-secondary">remove</button>
-        </li>
-        <li class="cart border">
-          <div class="item">
-            <div class="cart-img">
-              <img src="{% static 'products/img/product3.png' %}" alt="" />
-            </div>
-            <div class="cart-title">macbook laptop</div>
-          </div>
-          <div class="price">$450</div>
-          <button class="btn btn-outline-secondary">remove</button>
-        </li>
-        <li class="cart border">
-          <div class="item">
-            <div class="cart-img">
-              <img src="{% static 'products/img/product4.png' %}" alt="" />
-            </div>
-            <div class="cart-title">macbook laptop</div>
-          </div>
-          <div class="price">$450</div>
-          <button class="btn btn-outline-secondary">remove</button>
-        </li>
-      </ul>
     </div>
     <div class="overlay hidden"></div>
     <nav
